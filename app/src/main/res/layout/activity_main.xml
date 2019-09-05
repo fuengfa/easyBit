@@ -24,21 +24,43 @@
                  android:layout_marginTop="2dp"
                  android:src="@drawable/p5"
                  android:layout_width="wrap_content"
-                 android:layout_height="170dp"/>
+                 android:layout_height="200dp"/>
 
          <TextView
                  android:layout_marginTop="5dp"
-                 android:background="#E4F1F0F0"
+                 android:background="#BEF4511E"
                  android:padding="3dp"
                  android:textSize="30dp"
                  android:gravity="center"
+                 android:textColor="#F2FFFFFF"
                  android:text="iPhone XR"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"/>
          <LinearLayout
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content">
+
+         </LinearLayout>
+      </LinearLayout>
+      <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+         <LinearLayout
+                 android:gravity="center"
+                 android:id="@+id/highScore"
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
             <TextView
+                    android:background="#FFFFFF"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:text="จะหมดเวลาประมูลในอีก"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:textColor="#F2F80303"
+                    android:background="#FFFFFF"
                     android:id="@+id/time"
                     android:layout_marginBottom="5dp"
                     android:textSize="20dp"
@@ -46,22 +68,101 @@
                     android:text="05 : 59 "
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
+            <TextView
+                    android:padding="5dp"
+                    android:textColor="#BFF4511E"
+                    android:textSize="50dp"
+                    android:id="@+id/hightBit"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20,000฿"/>
          </LinearLayout>
-      </LinearLayout>
-
-      <RelativeLayout
-
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-         <androidx.recyclerview.widget.RecyclerView
-                 android:layout_above="@+id/linearbutton"
+         <LinearLayout
+                 android:id="@+id/listBit"
+                 android:padding="20dp"
                  android:background="@drawable/corner"
-                 android:id="@+id/recyclerView"
-                 tools:listitem="@layout/showbitlist"
-                 tools:itemCount="10"
+                 android:layout_below="@+id/highScore"
+                 android:gravity="center"
+                 android:orientation="horizontal"
                  android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 />
+                 android:layout_height="wrap_content">
+            <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+               <ImageView
+                       android:src="@drawable/ic_face_black_24dp"
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"/>
+               <TextView
+                       android:id="@+id/username"
+                       android:textSize="18dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="10dp"
+                       android:text="Jame Smit"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:padding="5dp"
+                    android:background="@drawable/corner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+               <TextView
+                       android:textSize="18dp"
+                       android:id="@+id/money"
+                       android:layout_marginLeft="5dp"
+                       android:text="20,000$ "
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+         </LinearLayout>
+
+         <LinearLayout
+                 android:layout_marginTop="10dp"
+
+                 android:orientation="vertical"
+                 android:layout_below="@+id/listBit"
+                 android:background="@drawable/corner"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+            <TextView
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:text="Detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="- Dimensions:	150.9 x 75.7 x 8.3 mm (5.94 x 2.98 x 0.33 in)"/>
+            <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="- OS:	iOS 12, upgradable to iOS 12.4"/>
+            <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="- Technology: GSM / CDMA / HSPA / EVDO / LTE"/>
+
+         </LinearLayout>
+
 
          <LinearLayout
                  android:background="@drawable/corner"
@@ -86,9 +187,9 @@
                <Button
                        android:background="@drawable/circle_shape"
                        android:id="@+id/bit1"
-                       android:textSize="30dp"
-                       android:textColor="#BFFFFFFF"
-                       android:text="50"
+                       android:textSize="25dp"
+                       android:textColor="#F2FFFFFF"
+                       android:text="+50฿"
                        android:layout_width="96dp"
                        android:layout_height="96dp"/>
                <View
@@ -100,9 +201,9 @@
                <Button
                        android:background="@drawable/circle_shape"
                        android:id="@+id/bit2"
-                       android:textSize="30dp"
-                       android:textColor="#BFFFFFFF"
-                       android:text="100"
+                       android:textSize="25dp"
+                       android:textColor="#F2FFFFFF"
+                       android:text="+100฿"
                        android:layout_width="96dp"
                        android:layout_height="96dp"/>
 
@@ -115,9 +216,9 @@
                <Button
                        android:background="@drawable/circle_shape"
                        android:id="@+id/bit3"
-                       android:textSize="30dp"
-                       android:textColor="#BFFFFFFF"
-                       android:text="1,000"
+                       android:textSize="25dp"
+                       android:textColor="#F2FFFFFF"
+                       android:text="+1,000฿"
                        android:layout_width="96dp"
                        android:layout_height="96dp"/>
                <View

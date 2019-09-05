@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "188648716717",
+    "firebase_url": "https://easybit-5c22e.firebaseio.com",
+    "project_id": "easybit-5c22e",
+    "storage_bucket": "easybit-5c22e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188648716717:android:29ef0af3b4bd91e4db8924",
+        "android_client_info": {
+          "package_name": "com.scb.easybit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188648716717-cg28n6egirvnufo1ss1a8lsb3ken6lgq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scb.easybit",
+            "certificate_hash": "cb84838a4d0a5915c90ae5ccd5e45a7c8ddd3bc2"
+          }
+        },
+        {
+          "client_id": "188648716717-3535u0j5bmv1vu64frkiv9hkpoc7b9qm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo50ueOCKRQ1E-p8Fx6kysx_X068Elapw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188648716717-3535u0j5bmv1vu64frkiv9hkpoc7b9qm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
