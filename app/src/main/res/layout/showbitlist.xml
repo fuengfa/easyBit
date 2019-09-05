@@ -4,14 +4,14 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
         <LinearLayout
-                android:gravity="left"
+                android:gravity="center"
                 android:padding="5dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
                         android:gravity="center"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
@@ -19,6 +19,8 @@
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"/>
                         <TextView
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
                                 android:text="Jame Smit"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>

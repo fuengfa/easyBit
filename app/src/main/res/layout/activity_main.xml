@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#F5F0F0"
         android:orientation="vertical"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -14,82 +15,121 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent">
       <LinearLayout
+              android:background="@drawable/corner"
               android:gravity="center"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical">
          <ImageView
-                 android:src="@drawable/p2"
+                 android:layout_marginTop="2dp"
+                 android:src="@drawable/p5"
                  android:layout_width="wrap_content"
-                 android:layout_height="180dp"/>
+                 android:layout_height="170dp"/>
 
          <TextView
+                 android:layout_marginTop="5dp"
+                 android:background="#E4F1F0F0"
                  android:padding="3dp"
                  android:textSize="30dp"
                  android:gravity="center"
                  android:text="iPhone XR"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"/>
+         <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/time"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:text="05 : 59 "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+         </LinearLayout>
+      </LinearLayout>
 
-         <TextView
-                 android:id="@+id/time"
-                 android:layout_marginBottom="5dp"
-                 android:textSize="20dp"
+      <RelativeLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+         <androidx.recyclerview.widget.RecyclerView
+                 android:layout_above="@+id/linearbutton"
+                 android:background="@drawable/corner"
+                 android:id="@+id/recyclerView"
+                 tools:listitem="@layout/showbitlist"
+                 tools:itemCount="10"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 />
+
+         <LinearLayout
+                 android:background="@drawable/corner"
+                 android:layout_marginTop="2dp"
+                 android:layout_alignParentBottom="true"
+                 android:id="@+id/linearbutton"
+                 android:orientation="horizontal"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
                  android:gravity="center"
-                 android:text="05 : 59 "
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"/>
-      </LinearLayout>
+                 android:paddingTop="10dp"
+                 android:paddingBottom="10dp"
+                 >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+               <View
+                       android:layout_width="0dp"
+                       android:layout_height="fill_parent"
+                       android:layout_weight="1"
+                       />
+               <Button
+                       android:background="@drawable/circle_shape"
+                       android:id="@+id/bit1"
+                       android:textSize="30dp"
+                       android:textColor="#BFFFFFFF"
+                       android:text="50"
+                       android:layout_width="96dp"
+                       android:layout_height="96dp"/>
+               <View
+                       android:layout_width="0dp"
+                       android:layout_height="fill_parent"
+                       android:layout_weight="1"
+                       />
 
-      <androidx.recyclerview.widget.RecyclerView
-              android:background="@drawable/corner"
-              android:id="@+id/recyclerView"
-              tools:listitem="@layout/showbitlist"
-              tools:itemCount="5"
-              android:layout_width="match_parent"
-              android:layout_height="200dp"
-              />
+               <Button
+                       android:background="@drawable/circle_shape"
+                       android:id="@+id/bit2"
+                       android:textSize="30dp"
+                       android:textColor="#BFFFFFFF"
+                       android:text="100"
+                       android:layout_width="96dp"
+                       android:layout_height="96dp"/>
 
-      <LinearLayout
-              android:layout_alignParentBottom="true"
-              android:layout_marginTop="5dp"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              >
-         <Button
-                 android:background="@drawable/circle_shape"
-                 android:id="@+id/bit1"
-                 android:textSize="30dp"
-                 android:textColor="#B388FF"
-                 android:layout_weight="1"
-                 android:text="50"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"/>
+               <View
+                       android:layout_width="0dp"
+                       android:layout_height="fill_parent"
+                       android:layout_weight="1"
+                       />
 
-         <Button
-                 android:background="@drawable/circle_shape"
-                 android:id="@+id/bit2"
-                 android:textSize="30dp"
-                 android:textColor="#B388FF"
-                 android:layout_marginLeft="10dp"
-                 android:layout_weight="1"
-                 android:text="100"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"/>
+               <Button
+                       android:background="@drawable/circle_shape"
+                       android:id="@+id/bit3"
+                       android:textSize="30dp"
+                       android:textColor="#BFFFFFFF"
+                       android:text="1,000"
+                       android:layout_width="96dp"
+                       android:layout_height="96dp"/>
+               <View
+                       android:layout_width="0dp"
+                       android:layout_height="fill_parent"
+                       android:layout_weight="1"
+                       />
+            </LinearLayout>
+         </LinearLayout>
 
-         <Button
-                 android:background="@drawable/circle_shape"
-                 android:id="@+id/bit3"
-                 android:textSize="30dp"
-                 android:textColor="#B388FF"
-                 android:layout_marginLeft="10dp"
-                 android:layout_weight="1"
-                 android:text="1,000"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"/>
 
-      </LinearLayout>
+      </RelativeLayout>
    </LinearLayout>
 
 </RelativeLayout>
