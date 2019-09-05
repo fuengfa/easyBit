@@ -30,7 +30,7 @@
                  android:layout_marginTop="5dp"
                  android:background="#BEF4511E"
                  android:padding="3dp"
-                 android:textSize="30dp"
+                 android:textSize="22dp"
                  android:gravity="center"
                  android:textColor="#F2FFFFFF"
                  android:text="iPhone XR"
@@ -125,41 +125,23 @@
          </LinearLayout>
 
          <LinearLayout
-                 android:layout_marginTop="10dp"
-
-                 android:orientation="vertical"
+                 android:gravity="center"
                  android:layout_below="@+id/listBit"
-                 android:background="@drawable/corner"
+                 android:layout_marginTop="5dp"
+                 android:orientation="vertical"
+                 android:layout_above="@+id/linearbutton"
+
                  android:layout_width="match_parent"
                  android:layout_height="match_parent">
-            <TextView
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textSize="20dp"
-                    android:gravity="center"
-                    android:text="Detail"
+            <Button
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:textAllCaps="false"
+                    android:textColor="#969393"
+                    android:background="#FFFFFF"
+                    android:text="View Product Detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
-            <TextView
-                    android:layout_marginLeft="15dp"
-                    android:gravity="left"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="- Dimensions:	150.9 x 75.7 x 8.3 mm (5.94 x 2.98 x 0.33 in)"/>
-            <TextView
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="15dp"
-                    android:gravity="left"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="- OS:	iOS 12, upgradable to iOS 12.4"/>
-            <TextView
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="15dp"
-                    android:gravity="left"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="- Technology: GSM / CDMA / HSPA / EVDO / LTE"/>
 
          </LinearLayout>
 
