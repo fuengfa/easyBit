@@ -2,29 +2,24 @@ package com.scb.easybit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
-import com.google.firebase.firestore.DocumentReference
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.functions.FirebaseFunctions
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
-import kotlin.collections.HashMap
+import androidx.viewpager.widget.ViewPager
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var myRef: DatabaseReference
+    private var imageSlider: ViewPager? = null
+    private var imgArray: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        imgArray?.add("https://1.bp.blogspot.com/-x6ar420f2sA/XFmWj_fX2OI/AAAAAAAADiE/X1wdpbJDYkwDDdc-6EkofeneJtAO4vCfQCLcBGAs/s1600/1469069-20190205110021-ba01ac6.jpg")
+        imgArray?.add("https://www.appdisqus.com/wp-content/uploads/2018/10/iphone-xr-select-static-201809_GEO_EMEA-1280x720.jpg")
+        imgArray?.add("https://www.xn--12c1bij4d1a0fza6gi5c.com/wp-content/uploads/2019/07/iphone-xr-2019-concept-1280x720.jpg")
+
+        imageSlider = findViewById(R.id.viewpager)
+        imageSlider?.adapter = PhotoPagerAdapter(supportFragmentManager,imgArray)
 
 
 //        val database = FirebaseDatabase.getInstance()
