@@ -43,7 +43,7 @@ class MainFragment : Fragment() {
         val _view = inflater.inflate(R.layout.fragment_main, container, false)
 
         _view.recyclerView.let {
-            it.adapter = mAdapter
+//            it.adapter = mAdapter
 
             //IMPORTANT ! ! ! ! ! !
 //            it.layoutManager = LinearLayoutManager(activity)

@@ -222,10 +222,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
-           <ScrollView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content">
-
                <LinearLayout
                        android:orientation="horizontal"
                        android:background="#444"
@@ -242,7 +238,6 @@
               </androidx.recyclerview.widget.RecyclerView>
 
                </LinearLayout>
-           </ScrollView>
         </LinearLayout>
     </ScrollView>
 
