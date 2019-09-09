@@ -28,6 +28,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.ouattararomuald:slider-glide:2.0.0' // If you use Glide
     implementation("com.squareup.retrofit2:retrofit:2.6.0")
     implementation("com.squareup.retrofit2:converter-gson:2.5.0")
     implementation 'com.google.firebase:firebase-messaging:18.0.0'
