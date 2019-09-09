@@ -16,17 +16,13 @@ import java.lang.Exception
 class LoginActivity : AppCompatActivity() {
 
     val JSON = MediaType.parse("application/json; charset=utf-8")
-
-    lateinit var username:JSONObject
-    lateinit var password:JSONObject
     private var mDataArray: ArrayList<ResponseBody> = ArrayList<ResponseBody>()
-    var postUrl = "http://192.168.101.178:8088/api/v2/customer/login"
+    var postUrl = "http://192.168.101.157:8088/api/v2/customer/login"
     var postBody = "{\n" +
             "    \"userName\": \"user1\",\n" +
             "    \"password\": \"1234\"\n" +
             "}"
 
-    var mMobileArray: ArrayList<UserResponse> = ArrayList<UserResponse>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,27 +39,6 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
-//        val body: Body = postBody.toa;
-
-//        val httpAsync = "http://192.168.101.178:8088/api/v2/customer/login"
-//            .httpPost(postUrl, postBody)
-//            .responseString { request, response, result ->
-//                when (result) {
-//                    is Result.Failure -> {
-//                        val ex = result.getException()
-//                        println(ex)
-//                    }
-//                    is Result.Success -> {
-//                        val data = result.get()
-//                        println(data)
-//                    }
-//                }
-//            }
-//
-//        httpAsync.join()
-//
-//        val http = "http://192.168.101.178:8088/api/v2/customer/login"
-//                .httpPost(postBody.)
     }
 
 

@@ -5,13 +5,13 @@
               android:layout_height="match_parent"
               xmlns:app="http://schemas.android.com/apk/res-auto"
               tools:context=".fragment.UserFragment"
-              android:background="#E6E6E6"
+              android:background="#FFFFFF"
               android:orientation="vertical"
         >
 
 
     <androidx.appcompat.widget.Toolbar
-            android:background="@color/colorPrimary"
+            android:background="#8F5E35B1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -38,33 +38,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <LinearLayout
-                    android:background="#555"
+                    android:background="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
+                <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpagerFirstPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                </androidx.viewpager.widget.ViewPager>
+
             </LinearLayout>
+            <TextView
+                    android:background="@drawable/cornerline"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="#333"
+                    android:paddingLeft="15dp"
+                    android:text="หมวดหมู่"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                <TextView
-                        android:textSize="20sp"
-                        android:textColor="#333"
-                        android:paddingLeft="15dp"
-                        android:text="หมวดหมู่"
-                        android:layout_marginVertical="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
                 <LinearLayout
-                        android:layout_marginVertical="20dp"
+                        android:layout_marginTop="10dp"
                         android:gravity="center_horizontal"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                     <LinearLayout
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:background="@drawable/cornerline"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
@@ -73,8 +82,8 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_marginHorizontal="20dp"
                                 android:src="@drawable/smartphone"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"/>
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"/>
                         <TextView
                                 android:text="สมาร์ทโฟน"
                                 android:layout_width="wrap_content"
@@ -82,6 +91,9 @@
                     </LinearLayout>
 
                     <LinearLayout
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:background="@drawable/cornerline"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
@@ -90,14 +102,17 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_marginHorizontal="20dp"
                                 android:src="@drawable/laptop"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"/>
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"/>
                         <TextView
                                 android:text="คอมพิวเตอร์"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                     </LinearLayout>
                     <LinearLayout
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:background="@drawable/cornerline"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
@@ -106,8 +121,8 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_marginHorizontal="20dp"
                                 android:src="@drawable/house"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"/>
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"/>
                         <TextView
                                 android:text="เครื่องใช้ไฟฟ้า"
                                 android:layout_width="wrap_content"
@@ -115,6 +130,9 @@
                     </LinearLayout>
 
                     <LinearLayout
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:background="@drawable/cornerline"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
@@ -123,8 +141,8 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_marginHorizontal="20dp"
                                 android:src="@drawable/dress"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"/>
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"/>
                         <TextView
                                 android:text="เสื้อผ้า"
                                 android:layout_width="wrap_content"
@@ -134,13 +152,18 @@
                 </LinearLayout>
 
                 <LinearLayout
-                        android:layout_marginTop="15dp"
+                        android:padding="5dp"
+                        android:layout_marginBottom="10dp"
                         android:gravity="center_horizontal"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                     <LinearLayout
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:background="@drawable/cornerline"
+
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
@@ -149,8 +172,8 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_marginHorizontal="20dp"
                                 android:src="@drawable/cosmetics"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"/>
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"/>
                         <TextView
                                 android:text="เครื่องสำอาง"
                                 android:layout_width="wrap_content"
@@ -159,6 +182,9 @@
 
 
                     <LinearLayout
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:background="@drawable/cornerline"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
@@ -167,8 +193,8 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_marginHorizontal="20dp"
                                 android:src="@drawable/pet_shop"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"/>
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"/>
                         <TextView
                                 android:text="สัตว์เลี้ยง"
                                 android:layout_width="wrap_content"
@@ -176,6 +202,9 @@
                     </LinearLayout>
 
                     <LinearLayout
+                            android:layout_marginRight="5dp"
+                            android:padding="5dp"
+                            android:background="@drawable/cornerline"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
@@ -184,8 +213,8 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_marginHorizontal="20dp"
                                 android:src="@drawable/basketball"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"/>
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"/>
                         <TextView
                                 android:text="กีฬา"
                                 android:layout_width="wrap_content"
@@ -193,6 +222,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                            android:padding="5dp"
+                            android:background="@drawable/cornerline"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
@@ -201,8 +232,8 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_marginHorizontal="20dp"
                                 android:src="@drawable/dog_food"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"/>
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"/>
                         <TextView
                                 android:text="อื่นๆ"
                                 android:layout_width="wrap_content"
@@ -213,31 +244,31 @@
             </LinearLayout>
 
             <TextView
-                    android:paddingTop="20dp"
+                    android:gravity="center"
+                    android:background="@drawable/cornerline"
+                    android:paddingTop="2dp"
                     android:textSize="20sp"
                     android:textColor="#333"
                     android:paddingLeft="15dp"
                     android:text="Bid Now"
-                    android:layout_marginVertical="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
-               <LinearLayout
-                       android:orientation="horizontal"
-                       android:background="#444"
-                       android:layout_width="match_parent"
-                       android:layout_height="200dp">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
 
-              <androidx.recyclerview.widget.RecyclerView
-                      android:id="@+id/recyclerView"
-                      tools:listitem="@layout/bidnow_layout"
-                      android:layout_width="match_parent"
-                      android:layout_height="200dp"
-                      >
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        tools:listitem="@layout/bidnow_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:clipToPadding="false"
+                        />
 
-              </androidx.recyclerview.widget.RecyclerView>
-
-               </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
