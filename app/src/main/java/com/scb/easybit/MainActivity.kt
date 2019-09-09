@@ -27,45 +27,46 @@ class MainActivity : AppCompatActivity() {
 
         val db = FirebaseFirestore.getInstance()
 
-        val bithigh = db.collection("room2/userbit")
-            .get()
+        addBidButton.setOnClickListener {
 
-
-
-
-
-        db.collection("bitroom/room2/userbit").addSnapshotListener { snapshot, e ->
-            if(e != null){
-                Log.w("errorlisten", "listen:error", e)
-                return@addSnapshotListener
-            }
-            if (snapshot != null){
-                for (dc in snapshot.documentChanges){
-                    if (dc.type == DocumentChange.Type.ADDED) {
-                        Log.d("listenSuccess", "New city: ${dc.document.data}")
-                        hightBit.text = "${dc.document.data.get("bitcost")}"
-                        username.text = "${dc.document.data.get("username")}"
-                        money.text = "${dc.document.data.get("bitcost")}"
-                    }
-                }
-            }
         }
 
+//        val bithigh = db.collection("room2/userbit")
+//            .get()
+//
+//
+//        db.collection("bitroom/room2/userbit").addSnapshotListener { snapshot, e ->
+//            if(e != null){
+//                Log.w("errorlisten", "listen:error", e)
+//                return@addSnapshotListener
+//            }
+//            if (snapshot != null){
+//                for (dc in snapshot.documentChanges){
+//                    if (dc.type == DocumentChange.Type.ADDED) {
+//                        Log.d("listenSuccess", "New city: ${dc.document.data}")
+//                        hightBit.text = "${dc.document.data.get("bitcost")}"
+//                        username.text = "${dc.document.data.get("username")}"
+//                        money.text = "${dc.document.data.get("bitcost")}"
+//                    }
+//                }
+//            }
+//        }
 
-        bit1.setOnClickListener {
-            val data1 = mutableMapOf<String,Any>(
-                "bitcost" to "2000",
-                "username" to "fuengfa",
-                "userid" to "3"
-            )
-            val cities = db.collection("bitroom/room2/userbit")
-                .add(data1)
-                .addOnSuccessListener { documentReference ->
-                    Log.d("fuengfa", "DocumentSnapshot written with ID: ${documentReference.id.get(1)}")
-                }
-                .addOnFailureListener { e ->
-                    Log.w("fuengfa", "Error adding document", e)
-                }
-        }
+
+//        bit1.setOnClickListener {
+//            val data1 = mutableMapOf<String,Any>(
+//                "bitcost" to "2000",
+//                "username" to "fuengfa",
+//                "userid" to "3"
+//            )
+//            val cities = db.collection("bitroom/room2/userbit")
+//                .add(data1)
+//                .addOnSuccessListener { documentReference ->
+//                    Log.d("fuengfa", "DocumentSnapshot written with ID: ${documentReference.id.get(1)}")
+//                }
+//                .addOnFailureListener { e ->
+//                    Log.w("fuengfa", "Error adding document", e)
+//                }
+//        }
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
         android:layout_marginTop="5dp"
-        android:background="#F5F0F0"
+        android:background="#FFFFFF"
         android:orientation="vertical"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -69,39 +69,122 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
          <LinearLayout
+                 android:background="#FFFFFF"
                  android:gravity="center"
                  android:id="@+id/highScore"
                  android:orientation="vertical"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content">
             <TextView
+                    android:layout_marginTop="5dp"
                     android:background="#FFFFFF"
                     android:textSize="20dp"
                     android:gravity="center"
                     android:text="จะหมดเวลาประมูลในอีก"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
-            <TextView
-                    android:textColor="#F2F80303"
-                    android:background="#FFFFFF"
-                    android:id="@+id/time"
-                    android:layout_marginBottom="5dp"
-                    android:textSize="20dp"
-                    android:gravity="center"
-                    android:text="05 : 59 "
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            <TextView
+            <LinearLayout
+                    android:id="@+id/timer"
                     android:padding="5dp"
-                    android:textColor="#F55E35B1"
-                    android:textSize="50dp"
-                    android:id="@+id/hightBit"
                     android:gravity="center"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="20,000฿"/>
+                    android:layout_height="wrap_content">
+               <TextView
+                       android:textColor="#F2F80303"
+                       android:id="@+id/hour"
+                       android:layout_marginBottom="5dp"
+                       android:textSize="20dp"
+                       android:gravity="center"
+                       android:text="05"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+               <TextView
+                       android:textColor="#F2F80303"
+                       android:layout_marginBottom="5dp"
+                       android:textSize="20dp"
+                       android:gravity="center"
+                       android:text=" : "
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+
+               <TextView
+                       android:textColor="#F2F80303"
+
+                       android:id="@+id/minute"
+                       android:layout_marginBottom="5dp"
+                       android:textSize="20dp"
+                       android:gravity="center"
+                       android:text="39"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+               <TextView
+                       android:textColor="#F2F80303"
+                       android:background="#00FFFFFF"
+                       android:layout_marginBottom="5dp"
+                       android:textSize="20dp"
+                       android:gravity="center"
+                       android:text=" : "
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+
+               <TextView
+                       android:textColor="#F2F80303"
+                       android:id="@+id/second"
+                       android:layout_marginBottom="5dp"
+                       android:textSize="20dp"
+                       android:gravity="center"
+                       android:text="21"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:background="@drawable/cornerline"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+               <ImageView
+                       android:padding="10dp"
+                       android:id="@+id/decreaseButton"
+                       android:src="@drawable/increasebutton"
+                       android:layout_width="84dp"
+                       android:layout_height="84dp"/>
+               <TextView
+                       android:padding="10dp"
+                       android:textColor="#F55E35B1"
+                       android:textSize="50dp"
+                       android:id="@+id/hightBit"
+                       android:gravity="center"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="20,000"/>
+
+               <ImageView
+                       android:padding="10dp"
+                       android:id="@+id/addBidButton"
+                       android:src="@drawable/addbutton"
+                       android:layout_width="84dp"
+                       android:layout_height="84dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+               <TextView
+                       android:gravity="center"
+                       android:text="ราคาต่อหนึ่งบิต : 100 บาท"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+            </LinearLayout>
+
          </LinearLayout>
+
          <LinearLayout
+                 android:layout_marginTop="10dp"
                  android:id="@+id/listBit"
                  android:padding="20dp"
                  android:background="@drawable/corner"
@@ -110,6 +193,7 @@
                  android:orientation="horizontal"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content">
+
             <LinearLayout
                     android:gravity="center"
                     android:orientation="horizontal"
@@ -139,7 +223,7 @@
                        android:textSize="18dp"
                        android:id="@+id/money"
                        android:layout_marginLeft="5dp"
-                       android:text="20,000฿ "
+                       android:text="20,000 "
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"/>
 
@@ -147,100 +231,8 @@
 
          </LinearLayout>
 
-         <LinearLayout
-                 android:gravity="center"
-                 android:layout_below="@+id/listBit"
-                 android:layout_marginTop="5dp"
-                 android:orientation="vertical"
-                 android:layout_above="@+id/linearbutton"
-
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent">
-            <Button
-                    android:padding="10dp"
-                    android:textSize="16dp"
-                    android:textAllCaps="false"
-                    android:textColor="#969393"
-                    android:background="#FFFFFF"
-                    android:text="View Product Detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-         </LinearLayout>
-
-
-         <LinearLayout
-                 android:background="@drawable/corner"
-                 android:layout_marginTop="2dp"
-                 android:layout_alignParentBottom="true"
-                 android:id="@+id/linearbutton"
-                 android:orientation="horizontal"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:gravity="center"
-                 android:paddingTop="10dp"
-                 android:paddingBottom="10dp"
-                 >
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-               <View
-                       android:layout_width="0dp"
-                       android:layout_height="fill_parent"
-                       android:layout_weight="1"
-                       />
-               <Button
-                       android:gravity="center"
-                       android:background="@drawable/circle_shape"
-                       android:id="@+id/bit1"
-                       android:textSize="25dp"
-                       android:textColor="#F2FFFFFF"
-                       android:text="+50"
-                       android:layout_width="96dp"
-                       android:layout_height="96dp"/>
-               <View
-                       android:layout_width="0dp"
-                       android:layout_height="fill_parent"
-                       android:layout_weight="1"
-                       />
-
-               <Button
-                       android:textAlignment="center"
-                       android:gravity="center"
-                       android:background="@drawable/circle_shape"
-                       android:id="@+id/bit2"
-                       android:textSize="25dp"
-                       android:textColor="#F2FFFFFF"
-                       android:text="+100"
-                       android:layout_width="96dp"
-                       android:layout_height="96dp"/>
-
-               <View
-                       android:layout_width="0dp"
-                       android:layout_height="fill_parent"
-                       android:layout_weight="1"
-                       />
-
-               <Button
-                       android:textAlignment="center"
-                       android:gravity="center"
-                       android:background="@drawable/circle_shape"
-                       android:id="@+id/bit3"
-                       android:textSize="25dp"
-                       android:textColor="#F2FFFFFF"
-                       android:text="+1,000"
-                       android:layout_width="96dp"
-                       android:layout_height="96dp"/>
-               <View
-                       android:layout_width="0dp"
-                       android:layout_height="fill_parent"
-                       android:layout_weight="1"
-                       />
-            </LinearLayout>
-         </LinearLayout>
-
-
       </RelativeLayout>
+
    </LinearLayout>
 
 </RelativeLayout>
