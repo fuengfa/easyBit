@@ -7,12 +7,32 @@ import androidx.viewpager.widget.ViewPager
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.concurrent.schedule
 
 
 class MainActivity : AppCompatActivity() {
 
     private var imageSlider: ViewPager? = null
     private var imgArray: ArrayList<String> = ArrayList()
+
+    private val pictureCallback = object : Callback<List<Userbid>> {
+        override fun onFailure(call: Call<List<Userbid>>, t: Throwable) {
+//            context?.showToast("Can not call country list $t")
+            Log.d("fuengfa",t.message)
+        }
+
+        override fun onResponse(call: Call<List<Userbid>>, response: Response<List<Userbid>>) {
+//            context?.showToast("Success")
+          var data = response.body()!!
+            Log.d("dataApoi", data.toString())
+        }
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +46,13 @@ class MainActivity : AppCompatActivity() {
         imageSlider?.adapter = PhotoPagerAdapter(supportFragmentManager, imgArray)
 
         val db = FirebaseFirestore.getInstance()
+
+
+        ApiManager.mobileService.bid(10).enqueue(pictureCallback)
+
+        Timer("SettingUp", false).schedule(1000) {
+
+        }
 
         addBidButton.setOnClickListener {
 
