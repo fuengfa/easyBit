@@ -25,10 +25,33 @@
                  android:layout_width="match_parent"
                  android:layout_height="200dp">
          </androidx.viewpager.widget.ViewPager>
+         <LinearLayout
+                 android:layout_below="@+id/picInViewpager"
+                 android:gravity="center"
+                 android:orientation="horizontal"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+            <ImageView
+                    android:src="@drawable/picshow"
+                    android:id="@+id/picOne"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+            <ImageView
+                    android:src="@drawable/picshow"
+                    android:id="@+id/picTwo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+            <ImageView
+                    android:src="@drawable/picshow"
+                    android:id="@+id/picThree"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+         </LinearLayout>
 
          <TextView
                  android:layout_marginTop="5dp"
-                 android:background="#BEF4511E"
+                 android:background="#8F5E35B1"
                  android:padding="3dp"
                  android:textSize="22dp"
                  android:gravity="center"
@@ -70,7 +93,7 @@
                     android:layout_height="wrap_content"/>
             <TextView
                     android:padding="5dp"
-                    android:textColor="#BFF4511E"
+                    android:textColor="#F55E35B1"
                     android:textSize="50dp"
                     android:id="@+id/hightBit"
                     android:gravity="center"
@@ -116,7 +139,7 @@
                        android:textSize="18dp"
                        android:id="@+id/money"
                        android:layout_marginLeft="5dp"
-                       android:text="20,000$ "
+                       android:text="20,000฿ "
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"/>
 
@@ -167,11 +190,12 @@
                        android:layout_weight="1"
                        />
                <Button
+                       android:gravity="center"
                        android:background="@drawable/circle_shape"
                        android:id="@+id/bit1"
                        android:textSize="25dp"
                        android:textColor="#F2FFFFFF"
-                       android:text="+50฿"
+                       android:text="+50"
                        android:layout_width="96dp"
                        android:layout_height="96dp"/>
                <View
@@ -181,11 +205,13 @@
                        />
 
                <Button
+                       android:textAlignment="center"
+                       android:gravity="center"
                        android:background="@drawable/circle_shape"
                        android:id="@+id/bit2"
                        android:textSize="25dp"
                        android:textColor="#F2FFFFFF"
-                       android:text="+100฿"
+                       android:text="+100"
                        android:layout_width="96dp"
                        android:layout_height="96dp"/>
 
@@ -196,11 +222,13 @@
                        />
 
                <Button
+                       android:textAlignment="center"
+                       android:gravity="center"
                        android:background="@drawable/circle_shape"
                        android:id="@+id/bit3"
                        android:textSize="25dp"
                        android:textColor="#F2FFFFFF"
-                       android:text="+1,000฿"
+                       android:text="+1,000"
                        android:layout_width="96dp"
                        android:layout_height="96dp"/>
                <View
