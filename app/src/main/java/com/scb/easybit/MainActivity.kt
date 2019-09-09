@@ -1,8 +1,10 @@
 package com.scb.easybit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         imageSlider = findViewById(R.id.viewpager)
         imageSlider?.adapter = PhotoPagerAdapter(supportFragmentManager,imgArray)
+
+        bit1.setOnClickListener {
+            val intent = Intent(this,EnterPinActivity::class.java)
+            startActivity(intent)
+        }
 
 
 //        val database = FirebaseDatabase.getInstance()
